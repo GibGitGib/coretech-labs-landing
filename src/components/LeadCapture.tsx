@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { Mail, User, CheckCircle2, ArrowUpRight } from "lucide-react";
+import { Mail, User, CheckCircle2 } from "lucide-react";
 
 export default function LeadCapture() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [productUpdates, setProductUpdates] = useState(true);
+  const [promosOffers, setPromosOffers] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,12 +36,12 @@ export default function LeadCapture() {
           </div>
 
           <h3 className="font-display text-2xl lg:text-3xl font-bold text-slate-100 tracking-tight">
-            Get notified when <br />
-            <span className="text-gradient-cyan-teal">new experiments ship.</span>
+            Get notified when{" "}
+            <span className="text-gradient-cyan-teal">something ships.</span>
           </h3>
           
           <p className="text-slate-400 text-sm leading-relaxed">
-            I send occasional updates when I ship something new — a product, a preset, or an optimization technique worth sharing. No spam, no drip campaigns, no "growth hacking."
+            Occasional updates when I release something new. No spam, no drip campaigns, no "growth hacking."
           </p>
 
           <div className="space-y-2 mt-4">
@@ -80,6 +82,28 @@ export default function LeadCapture() {
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full bg-brand-dark/80 border border-slate-800 focus:border-brand-cyan/60 rounded-lg py-3 pl-10 pr-4 text-sm text-slate-200 placeholder-slate-600 focus:outline-none focus:ring-1 focus:ring-brand-cyan/20 transition-all font-mono"
                 />
+              </div>
+
+              {/* Opt-in toggles */}
+              <div className="space-y-2.5 pt-1">
+                <label className="flex items-center space-x-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={productUpdates}
+                    onChange={(e) => setProductUpdates(e.target.checked)}
+                    className="w-4 h-4 rounded border-slate-700 bg-brand-dark text-brand-cyan focus:ring-brand-cyan/30 cursor-pointer"
+                  />
+                  <span className="text-xs text-slate-300">Product updates & new releases</span>
+                </label>
+                <label className="flex items-center space-x-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={promosOffers}
+                    onChange={(e) => setPromosOffers(e.target.checked)}
+                    className="w-4 h-4 rounded border-slate-700 bg-brand-dark text-brand-cyan focus:ring-brand-cyan/30 cursor-pointer"
+                  />
+                  <span className="text-xs text-slate-300">Promos & special offers</span>
+                </label>
               </div>
 
               <button
@@ -128,6 +152,18 @@ export default function LeadCapture() {
                   <span className="text-slate-500">FREQUENCY</span>
                   <span className="text-brand-cyan font-bold">~Monthly</span>
                 </div>
+                {productUpdates && (
+                  <div className="flex justify-between">
+                    <span className="text-slate-500">UPDATES</span>
+                    <span className="text-brand-teal font-medium">✓ Product releases</span>
+                  </div>
+                )}
+                {promosOffers && (
+                  <div className="flex justify-between">
+                    <span className="text-slate-500">PROMOS</span>
+                    <span className="text-brand-magenta font-medium">✓ Offers enabled</span>
+                  </div>
+                )}
               </div>
 
               <div className="text-[10px] text-slate-500 text-center font-mono">

@@ -7,7 +7,7 @@ import {
 
 import NetworkCanvas from "./components/NetworkCanvas";
 import SimulatorCockpit from "./components/SimulatorCockpit";
-import TechPillars from "./components/TechPillars";
+import AboutStudio from "./components/AboutStudio";
 import LeadCapture from "./components/LeadCapture";
 
 export default function App() {
@@ -55,7 +55,7 @@ export default function App() {
 
       {/* Side Rail Text */}
       <div className="absolute left-10 bottom-36 hidden xl:flex items-center transform -rotate-90 origin-left pointer-events-none select-none text-[9px] uppercase tracking-[0.52em] text-brand-cyan/30 font-mono">
-        Product studio — optimization × behavioral health — EST. 2024
+        Independent product studio — EST. 2024
       </div>
 
       {/* FIXED GLASS NAVIGATION BAR */}
@@ -80,8 +80,8 @@ export default function App() {
             <button onClick={() => scrollToSection("products-section")} className="hover:text-brand-cyan transition-colors cursor-pointer">
               Products
             </button>
-            <button onClick={() => scrollToSection("engine-section")} className="hover:text-brand-cyan transition-colors cursor-pointer">
-              The Engine
+            <button onClick={() => scrollToSection("about-section")} className="hover:text-brand-cyan transition-colors cursor-pointer">
+              About
             </button>
             <button onClick={() => scrollToSection("contact-section")} className="hover:text-brand-cyan transition-colors cursor-pointer">
               Contact
@@ -125,8 +125,8 @@ export default function App() {
               <button onClick={() => scrollToSection("products-section")} className="text-left py-2 hover:text-slate-100 transition-colors border-b border-white/5">
                 Products
               </button>
-              <button onClick={() => scrollToSection("engine-section")} className="text-left py-2 hover:text-slate-100 transition-colors border-b border-white/5">
-                The Engine
+              <button onClick={() => scrollToSection("about-section")} className="text-left py-2 hover:text-slate-100 transition-colors border-b border-white/5">
+                About
               </button>
               <button onClick={() => scrollToSection("contact-section")} className="text-left py-2 hover:text-slate-100 transition-colors">
                 Contact
@@ -181,31 +181,17 @@ export default function App() {
 
             {/* Primary Headline */}
             <h1 className="text-[52px] sm:text-[75px] md:text-[98px] leading-[0.9] font-bold tracking-tight text-slate-50 uppercase text-left">
-              OPTIMIZATION<br />
-              MEETS<br />
+              WE BUILD<br />
+              TOOLS THAT<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-cyan via-brand-purple to-brand-magenta animate-glow">
-                BEHAVIORAL HEALTH.
+                SOLVE PROBLEMS.
               </span>
             </h1>
 
             {/* Description */}
             <p className="max-w-lg text-slate-400 text-sm sm:text-base md:text-lg font-light leading-relaxed font-sans text-left">
-              CoreTech Labs is a solo-founder product studio. We build optimization engines and behavioral health tools — voice calculators, exposure therapy apps, restaurant waste reducers. No hype, just working software.
+              CoreTech Labs is a solo-founder product studio. We build practical software — voice calculators, therapeutic apps, food waste reduction tools. No hype, just working products you can use today.
             </p>
-
-            {/* Philosophy pull quote */}
-            <div className="max-w-lg bg-brand-dark-surface/80 border border-white/5 p-4 rounded text-left backdrop-blur-sm relative overflow-hidden">
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-brand-cyan" />
-              <div className="space-y-1">
-                <div className="text-[10px] font-mono text-slate-500 tracking-wider flex items-center space-x-1.5">
-                  <Activity className="w-3.5 h-3.5 text-brand-magenta animate-pulse" />
-                  <span>DISTRIBUTED R&D VELOCITY</span>
-                </div>
-                <p className="text-slate-300 font-display italic text-xs leading-relaxed">
-                  "Ship presets into the wild. Let real usage feed improvements back to the core engine. Every product stress-tests a different algorithm. That's the flywheel."
-                </p>
-              </div>
-            </div>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-stretch justify-start gap-4 pt-4 w-full sm:w-auto">
@@ -216,10 +202,10 @@ export default function App() {
                 See the Products
               </button>
               <button 
-                onClick={() => scrollToSection("engine-section")}
+                onClick={() => scrollToSection("about-section")}
                 className="px-10 py-4 border border-white/20 font-bold uppercase text-xs tracking-widest hover:border-white transition-all cursor-pointer text-center text-slate-300"
               >
-                How It Works
+                About the Studio
               </button>
             </div>
           </div>
@@ -227,7 +213,7 @@ export default function App() {
           <div className="lg:col-span-4 hidden lg:block" />
         </div>
 
-        {/* Ambient corner data — real, not fake */}
+        {/* Ambient corner data */}
         <div className="absolute hidden xl:block left-10 bottom-10 font-mono text-[9px] text-slate-600 space-y-1 select-none pointer-events-none">
           <div>BUILT BY: Corey (@GibGitGib)</div>
           <div>DOMAIN: coretechlabs.app</div>
@@ -246,9 +232,9 @@ export default function App() {
           <SimulatorCockpit />
         </section>
 
-        {/* ENGINE SECTION */}
+        {/* ABOUT SECTION (replaces engine) */}
         <section className="scroll-mt-28">
-          <TechPillars />
+          <AboutStudio />
         </section>
 
         {/* CONTACT / NEWSLETTER */}
@@ -277,7 +263,7 @@ export default function App() {
             </div>
 
             <p className="text-slate-400 text-xs md:text-sm leading-relaxed max-w-sm font-light">
-              A product studio building optimization engines and behavioral health tools. Solo founder, real products, no investors.
+              A solo product studio building practical software. Real products, open source, no investors.
             </p>
 
             <div className="text-[10px] text-slate-600 font-mono">
@@ -297,8 +283,8 @@ export default function App() {
                 </button>
               </li>
               <li>
-                <button onClick={() => scrollToSection("engine-section")} className="hover:text-brand-cyan text-left cursor-pointer transition-colors">
-                  [ The Engine ]
+                <button onClick={() => scrollToSection("about-section")} className="hover:text-brand-cyan text-left cursor-pointer transition-colors">
+                  [ About ]
                 </button>
               </li>
               <li>
@@ -321,7 +307,7 @@ export default function App() {
             </h5>
             
             <p className="text-xs text-slate-400 leading-relaxed font-light">
-              Reach out for collaborations, consulting, or to discuss the optimizer engine. I read every message.
+              Reach out for collaborations, consulting, or just to say hi. I read every message.
             </p>
 
             <div className="space-y-2.5 pt-2">

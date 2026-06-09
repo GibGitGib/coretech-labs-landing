@@ -29,8 +29,8 @@ export default function SimulatorCockpit() {
     {
       id: "fear-ladder",
       name: "Fear Ladder",
-      tagline: "Structured exposure therapy, step by step.",
-      description: "A PWA that implements exposure therapy protocols. Users build personalized fear hierarchies, track SUDS (Subjective Units of Distress) scores, and progress through graduated exposure. Evidence-based, privacy-first — all data stays local.",
+      tagline: "Face your fears, one step at a time.",
+      description: "A guided tool for building and climbing a personalized fear hierarchy. Rate situations, work through graduated exposure, and track your progress over time. Evidence-based approach, privacy-first — all data stays on your device.",
       icon: <Heart className="w-5 h-5" />,
       color: "brand-purple",
       link: "https://github.com/GibGitGib/fear-ladder",
@@ -39,8 +39,8 @@ export default function SimulatorCockpit() {
     {
       id: "so-spill",
       name: "So Spill",
-      tagline: "Emotional venting with AI-powered reflection.",
-      description: "A local-AI companion for emotional processing. Users vent freely, and the app provides reflective summaries, pattern recognition, and gentle redirection. Runs entirely on-device via WebLLM. No data leaves your browser.",
+      tagline: "A space to vent and reflect.",
+      description: "A private companion for emotional processing. Speak freely, and the app provides reflective summaries and pattern recognition. Runs entirely on-device — nothing you share ever leaves your browser.",
       icon: <MessageCircle className="w-5 h-5" />,
       color: "brand-magenta",
       link: "https://sospill.org",
@@ -49,8 +49,8 @@ export default function SimulatorCockpit() {
     {
       id: "menu-optimizer",
       name: "Menu Optimizer",
-      tagline: "Reduce food waste through intelligent menu optimization.",
-      description: "A B2B tool for restaurants that uses multi-algorithm optimization to reduce food waste. Grid search finds optimal inventory usage, genetic algorithms evolve menu combinations, and pairwise tournaments rank alternatives. Powered by the CoreTech Optimizer Engine.",
+      tagline: "Less waste, more profit for restaurants.",
+      description: "A tool that helps restaurants reduce food waste by analyzing inventory, menu pricing, and supplier costs. Input your numbers, see exactly where you're losing money, and get actionable recommendations. Built for busy restaurant owners.",
       icon: <UtensilsCrossed className="w-5 h-5" />,
       color: "brand-teal",
       link: "https://github.com/GibGitGib/menu-optimizer",
@@ -90,7 +90,7 @@ export default function SimulatorCockpit() {
             What we build.
           </h3>
           <p className="text-slate-400 text-sm mt-3 leading-relaxed">
-            Four public products. Each one stress-tests a different algorithm in the optimizer engine. Each one solves a real problem.
+            Four public products. Each one solves a real problem. Each one is free to use and open source.
           </p>
 
           {/* Product Tabs */}
@@ -133,7 +133,7 @@ export default function SimulatorCockpit() {
         <div className="bg-brand-dark-card/30 border border-slate-900 rounded-xl p-4 flex items-start space-x-3">
           <Calculator className="w-5 h-5 text-brand-cyan shrink-0 mt-0.5" />
           <p className="text-xs text-slate-500 leading-relaxed">
-            <span className="text-slate-300 font-medium">All products are open source.</span> Repos live on GitHub. Contributions, forks, and issues welcome — this is how the flywheel spins.
+            <span className="text-slate-300 font-medium">All products are open source.</span> Code lives on GitHub. Contributions, forks, and feedback welcome.
           </p>
         </div>
       </div>
@@ -173,26 +173,26 @@ export default function SimulatorCockpit() {
             )}
             {current.id === "fear-ladder" && (
               <>
-                <div className="text-xs text-slate-400 flex items-center gap-2"><span className="text-brand-purple">▸</span> Customizable fear hierarchy builder</div>
-                <div className="text-xs text-slate-400 flex items-center gap-2"><span className="text-brand-purple">▸</span> SUDS tracking with history</div>
-                <div className="text-xs text-slate-400 flex items-center gap-2"><span className="text-brand-purple">▸</span> Graduated exposure protocols</div>
+                <div className="text-xs text-slate-400 flex items-center gap-2"><span className="text-brand-purple">▸</span> Personalized fear hierarchy builder</div>
+                <div className="text-xs text-slate-400 flex items-center gap-2"><span className="text-brand-purple">▸</span> Progress tracking with history</div>
+                <div className="text-xs text-slate-400 flex items-center gap-2"><span className="text-brand-purple">▸</span> Graduated exposure sessions</div>
                 <div className="text-xs text-slate-400 flex items-center gap-2"><span className="text-brand-purple">▸</span> All data stored locally, never uploaded</div>
               </>
             )}
             {current.id === "so-spill" && (
               <>
-                <div className="text-xs text-slate-400 flex items-center gap-2"><span className="text-brand-magenta">▸</span> Local LLM via WebLLM (no cloud dependency)</div>
+                <div className="text-xs text-slate-400 flex items-center gap-2"><span className="text-brand-magenta">▸</span> On-device processing (no cloud dependency)</div>
                 <div className="text-xs text-slate-400 flex items-center gap-2"><span className="text-brand-magenta">▸</span> Reflective summaries and pattern recognition</div>
-                <div className="text-xs text-slate-400 flex items-center gap-2"><span className="text-brand-magenta">▸</span> Zero data leaves the browser</div>
-                <div className="text-xs text-slate-400 flex items-center gap-2"><span className="text-brand-magenta">▸</span> Installable PWA on any device</div>
+                <div className="text-xs text-slate-400 flex items-center gap-2"><span className="text-brand-magenta">▸</span> Nothing you share ever leaves your browser</div>
+                <div className="text-xs text-slate-400 flex items-center gap-2"><span className="text-brand-magenta">▸</span> Installable as an app on any device</div>
               </>
             )}
             {current.id === "menu-optimizer" && (
               <>
-                <div className="text-xs text-slate-400 flex items-center gap-2"><span className="text-brand-teal">▸</span> Grid search for inventory-to-menu matching</div>
-                <div className="text-xs text-slate-400 flex items-center gap-2"><span className="text-brand-teal">▸</span> Genetic algorithm for menu evolution</div>
-                <div className="text-xs text-slate-400 flex items-center gap-2"><span className="text-brand-teal">▸</span> Pairwise tournament ranking of alternatives</div>
-                <div className="text-xs text-slate-400 flex items-center gap-2"><span className="text-brand-teal">▸</span> Powered by CoreTech Optimizer Engine</div>
+                <div className="text-xs text-slate-400 flex items-center gap-2"><span className="text-brand-teal">▸</span> Inventory analysis and waste calculation</div>
+                <div className="text-xs text-slate-400 flex items-center gap-2"><span className="text-brand-teal">▸</span> Supplier cost comparison tools</div>
+                <div className="text-xs text-slate-400 flex items-center gap-2"><span className="text-brand-teal">▸</span> Menu pricing recommendations</div>
+                <div className="text-xs text-slate-400 flex items-center gap-2"><span className="text-brand-teal">▸</span> Built for busy restaurant owners</div>
               </>
             )}
           </div>
