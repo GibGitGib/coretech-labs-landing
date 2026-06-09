@@ -1,0 +1,6 @@
+{
+  "name": "CoreTech Labs",
+  "description": "Labs for Software Experiments — a product studio building optimization engines and behavioral health tools.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
