@@ -57,7 +57,7 @@ export default function LeadCapture() {
             </div>
             <div className="flex items-center space-x-3 text-xs text-slate-400">
               <span className="text-brand-cyan">▸</span>
-              <span>No tracking pixels, no analytics on emails</span>
+              <span>Basic analytics only — no creepy tracking</span>
             </div>
             <div className="flex items-center space-x-3 text-xs text-slate-400">
               <span className="text-brand-cyan">▸</span>
