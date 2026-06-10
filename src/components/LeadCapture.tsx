@@ -8,15 +8,21 @@ export default function LeadCapture() {
   const [productUpdates, setProductUpdates] = useState(true);
   const [promosOffers, setPromosOffers] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!email || !email.includes("@")) return;
 
     setIsSubmitting(true);
+    // Post to Substack
+    const form = e.currentTarget;
+    form.action = "https://coretechlabs.substack.com/api/v1/free";
+    form.method = "post";
+    form.target = "_blank";
+    form.submit();
     setTimeout(() => {
       setSubmitted(true);
       setIsSubmitting(false);
-    }, 1200);
+    }, 1500);
   };
 
   return (
@@ -75,6 +81,7 @@ export default function LeadCapture() {
                 </div>
                 <input
                   id="contact-email"
+                  name="email"
                   type="email"
                   required
                   placeholder="you@example.com"
